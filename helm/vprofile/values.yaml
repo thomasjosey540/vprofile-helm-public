@@ -1,6 +1,6 @@
 defaultUser: guest
 app:
-  image: 897722689332.dkr.ecr.us-east-1.amazonaws.com/vprofileappimg
+  image: <AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/vprofileappimg
   tag: d562bee
   replicas: 1
   containerPort: 8080
@@ -35,8 +35,8 @@ ingress:
   host: vprofile.dev-opsdemo.xyz
   servicePort: 8080
 secrets:
-  dbPassword: vprodbpass
-  rmqPassword: guest
+  dbPassword: CHANGE_ME
+  rmqPassword: CHANGE_ME
 dockerregistry:
   enabled: false
   server: ""
